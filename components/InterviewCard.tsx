@@ -51,9 +51,9 @@ const InterviewCard = async ({
             <p className="badge-text ">{normalizedType}</p>
           </div>
 
-          {/* Cover Image */}
+          {/* Cover Image — uses interviewId for stable SSR/client match */}
           <Image
-            src={getRandomInterviewCover()}
+            src={getRandomInterviewCover(interviewId)}
             alt="cover-image"
             width={90}
             height={90}
